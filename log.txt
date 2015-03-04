@@ -1,0 +1,22 @@
+Mar 04, 2015 1:08:51 AM server.Server run
+INFO: Initializing Model
+Mar 04, 2015 1:08:51 AM server.Server run
+INFO: Initializing HTTP Server
+Mar 04, 2015 1:08:51 AM server.Server run
+INFO: Starting HTTP Server
+Mar 04, 2015 1:08:51 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Mar 04, 2015 1:08:52 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Mar 04, 2015 1:08:52 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Mar 04, 2015 1:08:52 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Mar 04, 2015 1:08:52 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Mar 04, 2015 1:08:52 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Mar 04, 2015 1:08:52 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Mar 04, 2015 1:08:52 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
