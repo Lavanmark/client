@@ -97,7 +97,7 @@ public class SearchResult {
 	@Override
 	public String toString(){
 		if(successful){
-			if(searchTuples.size() > 0){
+			if(searchTuples.size() < 1){
 				return "FAILED\n";
 			}
 			StringBuilder sb = new StringBuilder();

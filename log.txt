@@ -1,106 +1,14 @@
-Mar 09, 2015 12:46:21 PM server.Server run
+Mar 09, 2015 2:00:04 PM server.Server run
 INFO: Initializing Model
-Mar 09, 2015 12:46:21 PM server.Server run
+Mar 09, 2015 2:00:04 PM server.Server run
 INFO: Initializing HTTP Server
-Mar 09, 2015 12:46:21 PM server.Server run
+Mar 09, 2015 2:00:04 PM server.Server run
 INFO: Starting HTTP Server
-Mar 09, 2015 12:46:21 PM server.Server run
+Mar 09, 2015 2:00:04 PM server.Server run
 INFO: Server Hosted at: 0:0:0:0:0:0:0:0
-Mar 09, 2015 12:46:21 PM server.Server run
+Mar 09, 2015 2:00:04 PM server.Server run
 INFO: Server Running on Port: 39640
-Mar 09, 2015 12:46:21 PM server.httphandle.SearchHandler handle
+Mar 09, 2015 2:00:27 PM server.httphandle.SearchHandler handle
 INFO: entering search handler
-Mar 09, 2015 12:46:21 PM server.httphandle.SearchHandler handle
+Mar 09, 2015 2:00:27 PM server.httphandle.SearchHandler handle
 INFO: exiting search handler
-Mar 09, 2015 12:46:21 PM server.httphandle.SearchHandler handle
-INFO: entering search handler
-Mar 09, 2015 12:46:21 PM server.httphandle.SearchHandler handle
-INFO: exiting search handler
-Mar 09, 2015 12:46:21 PM server.httphandle.SearchHandler handle
-INFO: entering search handler
-Mar 09, 2015 12:46:21 PM server.httphandle.SearchHandler handle
-INFO: exiting search handler
-Mar 09, 2015 12:46:21 PM server.httphandle.SearchHandler handle
-INFO: entering search handler
-Mar 09, 2015 12:46:21 PM server.httphandle.SearchHandler handle
-INFO: exiting search handler
-Mar 09, 2015 12:46:22 PM server.httphandle.SearchHandler handle
-INFO: entering search handler
-Mar 09, 2015 12:46:22 PM server.httphandle.SearchHandler handle
-INFO: exiting search handler
-Mar 09, 2015 12:46:22 PM server.httphandle.ValidateUserHandler handle
-INFO: entering validate user handler
-Mar 09, 2015 12:46:22 PM server.httphandle.ValidateUserHandler handle
-INFO: exiting validate user handler
-Mar 09, 2015 12:46:22 PM server.httphandle.ValidateUserHandler handle
-INFO: entering validate user handler
-Mar 09, 2015 12:46:22 PM server.httphandle.ValidateUserHandler handle
-INFO: exiting validate user handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetProjectsHandler handle
-INFO: entering get projects handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetProjectsHandler handle
-INFO: exiting get projects handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetProjectsHandler handle
-INFO: entering get projects handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetProjectsHandler handle
-INFO: exiting get projects handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetSampleImageHandler handle
-INFO: entering get sample image handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetSampleImageHandler handle
-INFO: exiting get sample image handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetSampleImageHandler handle
-INFO: entering get sample image handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetSampleImageHandler handle
-INFO: exiting get sample image handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetSampleImageHandler handle
-INFO: entering get sample image handler
-Mar 09, 2015 12:46:22 PM server.httphandle.GetSampleImageHandler handle
-INFO: exiting get sample image handler
-Mar 09, 2015 12:46:22 PM server.httphandle.DownloadBatchHandler handle
-INFO: entering download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: exiting download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: entering download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: exiting download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: entering download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: exiting download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: entering download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: exiting download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: entering download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.DownloadBatchHandler handle
-INFO: exiting download batch handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: entering get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: exiting get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: entering get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: exiting get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: entering get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: exiting get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: entering get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: exiting get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: entering get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.GetFieldsHandler handle
-INFO: exiting get fields handler
-Mar 09, 2015 12:46:23 PM server.httphandle.SubmitBatchHandler handle
-INFO: entering submit batch handler
-Mar 09, 2015 12:46:24 PM server.httphandle.SubmitBatchHandler handle
-INFO: exiting submit batch handler
-Mar 09, 2015 12:46:24 PM server.httphandle.SubmitBatchHandler handle
-INFO: entering submit batch handler
-Mar 09, 2015 12:46:24 PM server.httphandle.SubmitBatchHandler handle
-INFO: exiting submit batch handler

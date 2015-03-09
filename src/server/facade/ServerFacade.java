@@ -283,6 +283,7 @@ public class ServerFacade {
 				//go through all records
 				for(int r = 0; r < records.size(); r++){
 					//if records field is same as the field
+					
 					if(records.get(r).getFieldID() == fields.get(f).getId()){
 						//go through all the search words
 						for(int w = 0; w < wordList.size(); w++){
@@ -310,7 +311,6 @@ public class ServerFacade {
 	private static List<Field> ParseFieldsToSearch(String fieldsToSearch, Database db) throws DatabaseException{
 		String[] outter = fieldsToSearch.split(",");
 		List<Field> fieldsToReturn = new ArrayList<Field>();
-		System.out.println(outter.length);
 		try{
 			for(int i = 0; i < outter.length; i++){
 				Field addme = db.getFieldDAO().getField(new Field(Integer.parseInt(outter[i]),"id"));
