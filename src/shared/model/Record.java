@@ -3,6 +3,7 @@ package shared.model;
 public class Record {
 
 	private int recordNum;
+	private int rowNum;
 	private int projectKey;
 	private int imageKey;
 	private int fieldID;
@@ -31,6 +32,7 @@ public class Record {
 	 */
 	public Record(int projectKey, int imageKey, int fieldID, String data){
 		this.recordNum = -1;
+		this.rowNum = -1;
 		this.projectKey = projectKey;
 		this.imageKey = imageKey;
 		this.fieldID = fieldID;
@@ -39,14 +41,32 @@ public class Record {
 	
 	/**
 	 * 
-	 * @param recordNum
+	 * @param rowNum
 	 * @param projectKey
 	 * @param imageKey
 	 * @param fieldID
 	 * @param data
 	 */
-	public Record(int recordNum, int projectKey, int imageKey, int fieldID, String data){
+	public Record(int rowNum, int projectKey, int imageKey, int fieldID, String data){
+		this.recordNum = -1;
+		this.rowNum = rowNum;
+		this.projectKey = projectKey;
+		this.imageKey = imageKey;
+		this.fieldID = fieldID;
+		this.data = data;
+	}
+	/**
+	 * 
+	 * @param recordNum
+	 * @param rowNum
+	 * @param projectKey
+	 * @param imageKey
+	 * @param fieldID
+	 * @param data
+	 */
+	public Record(int recordNum, int rowNum, int projectKey, int imageKey, int fieldID, String data){
 		this.recordNum = recordNum;
+		this.rowNum = rowNum;
 		this.projectKey = projectKey;
 		this.imageKey = imageKey;
 		this.fieldID = fieldID;
@@ -104,6 +124,14 @@ public class Record {
 		this.data = data;
 	}
 	
+	public int getRowNum() {
+		return rowNum;
+	}
+
+	public void setRowNum(int rowNum) {
+		this.rowNum = rowNum;
+	}
+	
 	
 	
 	
@@ -126,6 +154,7 @@ public class Record {
 		result = prime * result + recordNum;
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

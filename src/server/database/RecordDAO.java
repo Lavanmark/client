@@ -44,18 +44,19 @@ public class RecordDAO {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try{
-			String query = "select recordNum, projectKey, imageKey, fieldKey, data from record";
+			String query = "select recordNum, rowNum, projectKey, imageKey, fieldKey, data from record";
 			stmt = db.getConnection().prepareStatement(query);
 			
 			rs = stmt.executeQuery();
 			while(rs.next()){
 				int recordNum = rs.getInt(1);
-				int projectKey = rs.getInt(2);
-				int imageKey = rs.getInt(3);
-				int fieldKey = rs.getInt(4);
-				String data = rs.getString(5);
+				int rowNum = rs.getInt(2);
+				int projectKey = rs.getInt(3);
+				int imageKey = rs.getInt(4);
+				int fieldKey = rs.getInt(5);
+				String data = rs.getString(6);
 				
-				result.add(new Record(recordNum, projectKey, imageKey, fieldKey, data));
+				result.add(new Record(recordNum, rowNum, projectKey, imageKey, fieldKey, data));
 			}
 		}catch(SQLException e){
 			DatabaseException serverEx = new DatabaseException(e.getMessage(), e);
@@ -84,13 +85,14 @@ public class RecordDAO {
 		PreparedStatement stmt = null;
 		ResultSet keyRS = null;		
 		try{
-			String query = "insert into record ( projectKey, imageKey, fieldKey, data)"
-					+ " values (?, ?, ?, ?)";
+			String query = "insert into record (rowNum, projectKey, imageKey, fieldKey, data)"
+					+ " values (?, ?, ?, ?, ?)";
 			stmt = db.getConnection().prepareStatement(query);
-			stmt.setInt(1, record.getProjectKey());
-			stmt.setInt(2, record.getImageKey());
-			stmt.setInt(3, record.getFieldID());
-			stmt.setString(4, record.getData());
+			stmt.setInt(1, record.getRowNum());
+			stmt.setInt(2, record.getProjectKey());
+			stmt.setInt(3, record.getImageKey());
+			stmt.setInt(4, record.getFieldID());
+			stmt.setString(5, record.getData());
 			
 			if(stmt.executeUpdate() == 1){
 				Statement keyStmt = db.getConnection().createStatement();
@@ -135,7 +137,7 @@ public class RecordDAO {
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 		try{
-			String query = "select recordNum, projectKey, imageKey, fieldKey, data"
+			String query = "select recordNum, rowNum, projectKey, imageKey, fieldKey, data"
 					+ " from record"
 					+ " where recordNum = ?";
 			stmt = db.getConnection().prepareStatement(query);
@@ -145,13 +147,14 @@ public class RecordDAO {
 			rs = stmt.executeQuery();
 			while(rs.next()){
 				int recordNum = rs.getInt(1);
-				int projectKey = rs.getInt(2);
-				int imageKey = rs.getInt(3);
-				int fieldKey = rs.getInt(4);
-				String data = rs.getString(5);
+				int rowNum = rs.getInt(2);
+				int projectKey = rs.getInt(3);
+				int imageKey = rs.getInt(4);
+				int fieldKey = rs.getInt(5);
+				String data = rs.getString(6);
 				
 				
-				result = new Record(recordNum, projectKey, imageKey, fieldKey, data);
+				result = new Record(recordNum, rowNum,projectKey, imageKey, fieldKey, data);
 			}
 		}catch(SQLException e){
 			DatabaseException serverEx = new DatabaseException(e.getMessage(), e);

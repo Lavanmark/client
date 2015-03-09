@@ -107,7 +107,7 @@ public class Database {
 		String createProject = "create table project(key integer not null primary key autoincrement,title text unique not null,recordsPerImage integer,firstYCoord integer,recordHeight integer);";
 		String createField = "create table field(id integer not null primary key autoincrement,projectKey integer not null,recordOrder integer not null,title text not null,xCoord integer not null,width integer not null,helpHtml text not null,knownData text);";
 		String createBatch = "create table batch(id integer not null primary key autoincrement,projectKey integer not null,file text unique not null,status integer not null);";
-		String createRecord = "create table record(recordNum integer not null primary key autoincrement,projectKey integer not null,imageKey integer not null,fieldKey integer not null,data text);";
+		String createRecord = "create table record(recordNum integer not null primary key autoincrement,rowNum integer not null,projectKey integer not null,imageKey integer not null,fieldKey integer not null,data text);";
 		PreparedStatement stmt = null;
 		
 		stmt = connection.prepareStatement(createUser);

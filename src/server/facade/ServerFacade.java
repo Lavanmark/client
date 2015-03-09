@@ -292,7 +292,7 @@ public class ServerFacade {
 								//add a search tuple of the data to the list
 								resultList.add(new SearchTuple(records.get(r).getImageKey(),
 										db.getBatchDAO().getBatch(new Batch(records.get(r).getImageKey(),"id")).getImgFile(),
-										records.get(r).getRecordNum(),
+										records.get(r).getRowNum(),
 										records.get(r).getFieldID()));
 							}
 						}

@@ -252,12 +252,9 @@ public class Controller implements IController {
 			
 			SearchParams params = new SearchParams(username, password, fieldString, searchWords);
 			SearchResult result = cc.search(params);
-			if(result != null){
-				if(result.isSuccessful())
+			if(result != null)
 					getView().setResponse(result.toString(cc.getURLPrefix()));
-				else
-					getView().setResponse("FAILED\n");
-			}else
+			else
 				getView().setResponse("FAILED\n");
 		}catch(ClientException e){
 			if(e.getCause() != null)

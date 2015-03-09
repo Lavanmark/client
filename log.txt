@@ -1,14 +1,14 @@
-Mar 09, 2015 2:00:04 PM server.Server run
+Mar 09, 2015 2:45:55 PM server.Server run
 INFO: Initializing Model
-Mar 09, 2015 2:00:04 PM server.Server run
+Mar 09, 2015 2:45:55 PM server.Server run
 INFO: Initializing HTTP Server
-Mar 09, 2015 2:00:04 PM server.Server run
+Mar 09, 2015 2:45:55 PM server.Server run
 INFO: Starting HTTP Server
-Mar 09, 2015 2:00:04 PM server.Server run
+Mar 09, 2015 2:45:55 PM server.Server run
 INFO: Server Hosted at: 0:0:0:0:0:0:0:0
-Mar 09, 2015 2:00:04 PM server.Server run
+Mar 09, 2015 2:45:55 PM server.Server run
 INFO: Server Running on Port: 39640
-Mar 09, 2015 2:00:27 PM server.httphandle.SearchHandler handle
+Mar 09, 2015 2:45:57 PM server.httphandle.SearchHandler handle
 INFO: entering search handler
-Mar 09, 2015 2:00:27 PM server.httphandle.SearchHandler handle
+Mar 09, 2015 2:45:57 PM server.httphandle.SearchHandler handle
 INFO: exiting search handler

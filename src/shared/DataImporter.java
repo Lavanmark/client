@@ -247,7 +247,7 @@ public class DataImporter {
 					Element valueElem = (Element)valueList.item(order-1);
 					
 					String data = valueElem.getTextContent();
-					records.add(new Record(projectKey, batchID, fields.get(f).getId(), data));
+					records.add(new Record(i+1, projectKey, batchID, fields.get(f).getId(), data));
 					db.getRecordDAO().add(records.get(((i+1)*(f+1))-1));
 				}
 			}
