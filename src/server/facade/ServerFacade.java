@@ -1,10 +1,7 @@
 package server.facade;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import server.ServerException;
 import server.database.Database;
 import server.database.DatabaseException;
@@ -265,17 +262,18 @@ public class ServerFacade {
 	 * @return record containing searchword
 	 * @throws ServerException
 	 */
-	public static Set<SearchTuple> Search(String fieldsToSearch, String searchWord) throws ServerException{
+	public static List<SearchTuple> Search(String fieldsToSearch, String searchWord) throws ServerException{
 		Database db = new Database();
 		try{
 			db.startTransaction();
 			
-			Set<SearchTuple> resultList = new HashSet<SearchTuple>();
+			List<SearchTuple> resultList = new ArrayList<SearchTuple>();
 			List<Field> fields = ParseFieldsToSearch(fieldsToSearch,db);
 			List<String> wordList = ParseSearchWords(searchWord);
 			List<Record> records = db.getRecordDAO().getAll();
 			
 			if(fields == null){
+				System.out.println("failed fields null");
 				db.endTransaction(false);
 				return null;
 			}
@@ -312,6 +310,7 @@ public class ServerFacade {
 	private static List<Field> ParseFieldsToSearch(String fieldsToSearch, Database db) throws DatabaseException{
 		String[] outter = fieldsToSearch.split(",");
 		List<Field> fieldsToReturn = new ArrayList<Field>();
+		System.out.println(outter.length);
 		try{
 			for(int i = 0; i < outter.length; i++){
 				Field addme = db.getFieldDAO().getField(new Field(Integer.parseInt(outter[i]),"id"));

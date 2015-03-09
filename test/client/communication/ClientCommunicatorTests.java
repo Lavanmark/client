@@ -401,7 +401,44 @@ public class ClientCommunicatorTests {
 			assertTrue(result.isSuccessful());
 			assertTrue(result.getSearchTuples().size() == 0);
 			
+			//finding two identical things
+			Record testr1 = new Record(1,1,1,"Bob");
+			db.startTransaction();
+			db.getRecordDAO().add(testr1);
+			db.endTransaction(true);
+			
+			params = new SearchParams("bob","bob","1","bob");
+			result = cc.search(params);
+			
+			assertTrue(result.isSuccessful());
+			assertTrue(result.getSearchTuples().size() == 2);
+			
+			
+			//only place I failed passing off first time
+			//failure previously because result came with set of records. ughhhh
+			Field testf1 = new Field(1,3,"hometown", "fields/help/help.html", 97, 20);
+			db.startTransaction();
+			
+			db.getFieldDAO().add(testf1);
+			Record testr2 = new Record(1,1,testf1.getId(),"51");
+			Record testr3 = new Record(1,1,testf1.getId(),"51");
+			db.getRecordDAO().add(testr2);
+			db.getRecordDAO().add(testr3);
+			db.endTransaction(true);
+			
+			
+			params = new SearchParams("bob","bob",testf1.getId()+"","51");
+			result = cc.search(params);
+			
+			assertTrue(result.isSuccessful());
+			assertTrue(result.getSearchTuples().size() == 2);
+			
+			
+			
 		}catch(ClientException e){
+			e.printStackTrace();
+			assertFalse(true);
+		}catch(DatabaseException e){
 			e.printStackTrace();
 			assertFalse(true);
 		}

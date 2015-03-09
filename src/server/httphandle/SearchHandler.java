@@ -2,7 +2,7 @@ package server.httphandle;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.util.Set;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -40,7 +40,7 @@ public class SearchHandler implements HttpHandler {
 		try {
 			resultUser = ServerFacade.ValidateUser(new User(params.getUsername(), params.getPassword()));
 			if(resultUser != null){
-				Set<SearchTuple> srchResult = ServerFacade.Search(params.getFields(), params.getSearchwords());
+				List<SearchTuple> srchResult = ServerFacade.Search(params.getFields(), params.getSearchwords());
 				if(srchResult != null)
 					resultToSend = new SearchResult(srchResult);
 				else

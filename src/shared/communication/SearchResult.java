@@ -1,11 +1,11 @@
 package shared.communication;
 
-import java.util.Set;
+import java.util.List;
 
 public class SearchResult {
 
 	private boolean successful;
-	private Set<SearchTuple> searchTuples;
+	private List<SearchTuple> searchTuples;
 	
 	
 	
@@ -22,7 +22,7 @@ public class SearchResult {
 	 * 
 	 * @param searchTuples
 	 */
-	public SearchResult(Set<SearchTuple> searchTuples){
+	public SearchResult(List<SearchTuple> searchTuples){
 		this.successful = true;
 		this.searchTuples = searchTuples;
 	}
@@ -46,11 +46,11 @@ public class SearchResult {
 		this.successful = successful;
 	}
 
-	public Set<SearchTuple> getSearchTuples() {
+	public List<SearchTuple> getSearchTuples() {
 		return searchTuples;
 	}
 
-	public void setSearchTuples(Set<SearchTuple> searchTuples) {
+	public void setSearchTuples(List<SearchTuple> searchTuples) {
 		this.searchTuples = searchTuples;
 	}
 	
