@@ -11,7 +11,7 @@ public class User {
 	private String lastName;
 	private String email;
 	private int recordsIndexed;
-	private String currentBatch;
+	private int currentBatch;
 	
 	
 	
@@ -27,7 +27,7 @@ public class User {
 		this.lastName = null;
 		this.email = null;
 		this.recordsIndexed = -1;
-		this.currentBatch = null;
+		this.currentBatch = -1;
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class User {
 		this.lastName = null;
 		this.email = null;
 		this.recordsIndexed = -1;
-		this.currentBatch = null;
+		this.currentBatch = -1;
 	}
 	
 	/**
@@ -56,7 +56,7 @@ public class User {
 	 * @param recordsIndexed
 	 * @param currentBatch
 	 */
-	public User(String username, String password, String firstName, String lastName, String email, int recordsIndexed, String currentBatch){
+	public User(String username, String password, String firstName, String lastName, String email, int recordsIndexed, int currentBatch){
 		this.id = -1;
 		this.username = username;
 		this.password = password;
@@ -78,7 +78,7 @@ public class User {
 	 * @param recordsIndexed
 	 * @param currentBatch
 	 */
-	public User(int id, String username, String password, String firstName, String lastName, String email, int recordsIndexed, String currentBatch){
+	public User(int id, String username, String password, String firstName, String lastName, String email, int recordsIndexed, int currentBatch){
 		this.id = id;
 		this.username = username;
 		this.password = password;
@@ -148,11 +148,11 @@ public class User {
 		this.recordsIndexed = recordsIndexed;
 	}
 
-	public String getCurrentBatch(){
+	public int getCurrentBatch(){
 		return currentBatch;
 	}
 
-	public void setCurrentBatch(String currentBatch){
+	public void setCurrentBatch(int currentBatch){
 		this.currentBatch = currentBatch;
 	}
 
@@ -179,8 +179,7 @@ public class User {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result
-				+ ((currentBatch == null) ? 0 : currentBatch.hashCode());
+		result = prime * result	+ currentBatch;
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result
 				+ ((firstName == null) ? 0 : firstName.hashCode());
@@ -206,10 +205,7 @@ public class User {
 		User other = (User) obj;
 		if (id != other.id)
 			return false;
-		if (currentBatch == null) {
-			if (other.currentBatch != null)
-				return false;
-		} else if (!currentBatch.equals(other.currentBatch))
+		if (currentBatch != other.currentBatch) 
 			return false;
 		if (email == null) {
 			if (other.email != null)

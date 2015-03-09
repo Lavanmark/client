@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
@@ -17,17 +18,13 @@ public class ProjectDAOTests {
 	private Database db;
 	private ProjectDAO prjd;
 	
+	
+	
+	
 	@Before
 	public void setup() {
 		db = new Database();
-		try {
-			Database.initialize();
-		} catch (DatabaseException e) {
-			e.printStackTrace();
-			return;
-		}
 		prjd = db.getProjectDAO();
-		
 	}
 	
 	@After
@@ -106,7 +103,7 @@ public class ProjectDAOTests {
 			Project test2 = new Project(1,2,3,"ProjDos");
 			Project test3 = new Project(2,2,3,"ProjTres");
 			
-			ArrayList<Project> testRcrds = new ArrayList<Project>();
+			List<Project> testRcrds = new ArrayList<Project>();
 			testRcrds.add(test1);
 			testRcrds.add(test2);
 			testRcrds.add(test3);
@@ -115,8 +112,8 @@ public class ProjectDAOTests {
 			prjd.add(test2);
 			prjd.add(test3);
 			
-			ArrayList<Project> comp = new ArrayList<Project>();
-			comp = (ArrayList<Project>) prjd.getAll();
+			List<Project> comp = null;
+			comp = prjd.getAll();
 			
 			assertEquals(comp,testRcrds);
 			

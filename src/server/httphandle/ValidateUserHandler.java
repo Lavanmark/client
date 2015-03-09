@@ -24,17 +24,19 @@ public class ValidateUserHandler implements HttpHandler {
 	
 	
 	
+	
 	/**
 	 * Handle HttpExchange from client
 	 */
 	@Override
 	public void handle(HttpExchange httpexchange) throws IOException {
 		logger.info("entering validate user handler");
+		
 		ValidateUserParams params = (ValidateUserParams)xmlStream.fromXML(httpexchange.getRequestBody());
 		User usr = new User(params.getUsername(), params.getPassword());
 		User resultUser = null;
 		try {
-			resultUser = ServerFacade.validateUser(usr);
+			resultUser = ServerFacade.ValidateUser(usr);
 		}
 		catch (ServerException e) {
             logger.log(Level.SEVERE, e.getMessage(), e);
@@ -50,7 +52,7 @@ public class ValidateUserHandler implements HttpHandler {
 		httpexchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);
 		xmlStream.toXML(resultToSend, httpexchange.getResponseBody());
 		httpexchange.getResponseBody().close();
+		
 		logger.info("exiting validate user handler");
 	}
-
 }

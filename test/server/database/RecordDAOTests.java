@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
@@ -16,17 +17,13 @@ public class RecordDAOTests {
 	private Database db;
 	private RecordDAO rcrd;
 	
+	
+	
+	
 	@Before
 	public void setup() {
 		db = new Database();
-		try {
-			Database.initialize();
-		} catch (DatabaseException e) {
-			e.printStackTrace();
-			return;
-		}
 		rcrd = db.getRecordDAO();
-		
 	}
 	
 	@After
@@ -80,7 +77,7 @@ public class RecordDAOTests {
 			Record test2 = new Record(1,2,3,"Larry");
 			Record test3 = new Record(2,2,3,"Smith");
 			
-			ArrayList<Record> testRcrds = new ArrayList<Record>();
+			List<Record> testRcrds = new ArrayList<Record>();
 			testRcrds.add(test1);
 			testRcrds.add(test2);
 			testRcrds.add(test3);
@@ -89,8 +86,8 @@ public class RecordDAOTests {
 			rcrd.add(test2);
 			rcrd.add(test3);
 			
-			ArrayList<Record> comp = new ArrayList<Record>();
-			comp = (ArrayList<Record>) rcrd.getAll();
+			List<Record> comp = null;
+			comp = rcrd.getAll();
 			
 			assertEquals(comp,testRcrds);
 			

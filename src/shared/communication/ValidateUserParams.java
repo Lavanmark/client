@@ -30,7 +30,9 @@ public class ValidateUserParams {
 	
 	/*
 	 * 
+	 * 
 	 * GETTERS AND SETTERS
+	 * 
 	 * 
 	 */
 	

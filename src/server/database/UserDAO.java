@@ -20,6 +20,9 @@ public class UserDAO {
 	
 	private Database db = null;
 	
+	
+	
+	
 	/**
 	 * Initializes DAO class with instance of the Database
 	 * @param db
@@ -53,7 +56,7 @@ public class UserDAO {
 				String lstName = rs.getString(5);
 				String email = rs.getString(6);
 				int recordsIndx = rs.getInt(7);
-				String curBatch = rs.getString(8);
+				int curBatch = rs.getInt(8);
 				
 				result.add(new User(id,usrname,password,fstName,lstName,email,recordsIndx,curBatch));
 			}
@@ -94,7 +97,7 @@ public class UserDAO {
 			stmt.setString(4, user.getLastName());
 			stmt.setString(5, user.getEmail());
 			stmt.setInt(6, user.getRecordsIndexed());
-			stmt.setString(7, user.getCurrentBatch());
+			stmt.setInt(7, user.getCurrentBatch());
 			
 			if(stmt.executeUpdate() == 1){
 				Statement keyStmt = db.getConnection().createStatement();
@@ -144,7 +147,7 @@ public class UserDAO {
 			stmt.setString(4, user.getLastName());
 			stmt.setString(5, user.getEmail());
 			stmt.setInt(6, user.getRecordsIndexed());
-			stmt.setString(7, user.getCurrentBatch());
+			stmt.setInt(7, user.getCurrentBatch());
 			stmt.setInt(8, user.getId());
 			if (stmt.executeUpdate() != 1) {
 				DatabaseException serverEx = new DatabaseException("Could not update user");
@@ -198,7 +201,7 @@ public class UserDAO {
 				String lstName = rs.getString(5);
 				String email = rs.getString(6);
 				int recordsIndx = rs.getInt(7);
-				String curBatch = rs.getString(8);
+				int curBatch = rs.getInt(8);
 				
 				result = new User(id,usrname,password,fstName,lstName,email,recordsIndx,curBatch);
 			}

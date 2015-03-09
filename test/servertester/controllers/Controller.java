@@ -5,8 +5,8 @@ import java.util.*;
 import client.ClientException;
 import client.communication.ClientCommunicator;
 import servertester.views.*;
-import shared.communication.GetSampleImageParams;
-import shared.communication.ValidateUserParams;
+import shared.communication.*;
+import shared.model.*;
 
 public class Controller implements IController {
 
@@ -116,7 +116,7 @@ public class Controller implements IController {
 				System.err.println(e.getCause().toString());
 			else
 				e.printStackTrace();
-			getView().setResponse("Failed\n");
+			getView().setResponse("FAILED\n");
 		}
 	}
 	
@@ -134,7 +134,7 @@ public class Controller implements IController {
 				System.err.println(e.getCause().toString());
 			else
 				e.printStackTrace();
-			getView().setResponse("Failed\n");
+			getView().setResponse("FAILED\n");
 		}
 	}
 	
@@ -147,31 +147,122 @@ public class Controller implements IController {
 			int projectKey = Integer.parseInt(getView().getParameterValues()[2]);
 			
 			getView().setRequest(username + '\n' + password + '\n' + projectKey + '\n');
-			//TODO make this so that it adds http and host name and port
-			getView().setResponse(cc.getSampleImage((new GetSampleImageParams(username,password, projectKey))).toString());
+			GetSampleImageResult result = cc.getSampleImage((new GetSampleImageParams(username,password, projectKey)));
+			if(result.isSuccessful())
+				getView().setResponse(cc.getURLPrefix() + "/" + result.toString());
+			else
+				getView().setResponse(result.toString());
 		}catch(ClientException e){
 			if(e.getCause() != null)
 				System.err.println(e.getCause().toString());
 			else
 				e.printStackTrace();
-			getView().setResponse("Failed\n");
+			getView().setResponse("FAILED\n");
 		}
 	}
 	
 	private void downloadBatch() {
+		clearReqAndRes();
+		ClientCommunicator cc = new ClientCommunicator(getView().getHost(), getView().getPort());
+		try{
+			String username = getView().getParameterValues()[0];
+			String password = getView().getParameterValues()[1];
+			int projectKey = Integer.parseInt(getView().getParameterValues()[2]);
 		
+			getView().setRequest(username + '\n' + password + '\n' + projectKey + '\n');
+			GetBatchResult result = cc.downloadBatch((new GetBatchParams(username, password, projectKey)));
+			if(result != null)
+				getView().setResponse(result.toString(cc.getURLPrefix()));
+			else
+				getView().setResponse("FAILED\n");
+		}catch(ClientException e){
+			if(e.getCause() != null)
+				System.err.println(e.getCause().toString());
+			else
+				e.printStackTrace();
+			getView().setResponse("FAILED\n");
+		}
 	}
 	
 	private void getFields() {
-		
+		clearReqAndRes();
+		ClientCommunicator cc = new ClientCommunicator(getView().getHost(), getView().getPort());
+		try{
+			String username = getView().getParameterValues()[0];
+			String password = getView().getParameterValues()[1];
+			String projectIn = getView().getParameterValues()[2];
+			int projectKey;
+			
+			GetFieldsResult result = null;
+			if(!projectIn.equals("")){
+				projectKey = Integer.parseInt(projectIn);
+				getView().setRequest(username + '\n' + password + '\n' + projectKey + '\n');
+				result = cc.getFields((new GetFieldsParams(username, password, projectKey)));
+			}else{
+				projectKey = -1;
+				getView().setRequest(username + '\n' + password + '\n');
+				result = cc.getFields((new GetFieldsParams(username, password)));
+			}
+			
+			if(result != null)
+				getView().setResponse(result.toString());
+			else
+				getView().setResponse("FAILED\n");
+		}catch(ClientException e){
+			if(e.getCause() != null)
+				System.err.println(e.getCause().toString());
+			else
+				e.printStackTrace();
+			getView().setResponse("FAILED\n");
+		}
 	}
 	
 	private void submitBatch() {
-		
+		clearReqAndRes();
+		ClientCommunicator cc = new ClientCommunicator(getView().getHost(), getView().getPort());
+		try{
+			String username = getView().getParameterValues()[0];
+			String password = getView().getParameterValues()[1];
+			int batchID = Integer.parseInt(getView().getParameterValues()[2]);
+			String recordString = getView().getParameterValues()[3];
+			
+			AddBatchParams params = new AddBatchParams(username, password, new Batch(batchID, "id"), recordString);
+			AddBatchResult result = cc.submitBatch(params);
+			if(result != null)
+				getView().setResponse(result.toString());
+			else
+				getView().setResponse("FAILED\n");
+		}catch(ClientException e){
+			if(e.getCause() != null)
+				System.err.println(e.getCause().toString());
+			else
+				e.printStackTrace();
+			getView().setResponse("FAILED\n");
+		}
 	}
 	
 	private void search() {
-		
+		clearReqAndRes();
+		ClientCommunicator cc = new ClientCommunicator(getView().getHost(), getView().getPort());
+		try{
+			String username = getView().getParameterValues()[0];
+			String password = getView().getParameterValues()[1];
+			String fieldString = getView().getParameterValues()[2];
+			String searchWords = getView().getParameterValues()[3];
+			
+			SearchParams params = new SearchParams(username, password, fieldString, searchWords);
+			SearchResult result = cc.search(params);
+			if(result != null)
+				getView().setResponse(result.toString());
+			else
+				getView().setResponse("FAILED\n");
+		}catch(ClientException e){
+			if(e.getCause() != null)
+				System.err.println(e.getCause().toString());
+			else
+				e.printStackTrace();
+			getView().setResponse("FAILED\n");
+		}
 	}
 	
 	private void clearReqAndRes(){

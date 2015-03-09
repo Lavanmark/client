@@ -72,12 +72,12 @@ public class GetAllProjectResult {
 		if(allIsWell){
 			StringBuilder sb = new StringBuilder("");
 			for(int i = 0; i < projects.size(); i++){
-				sb.append(projects.get(i).getKey()+'\n');
-				sb.append(projects.get(i).getTitle()+'\n');
+				sb.append(projects.get(i).getKey()+ "\n");
+				sb.append(projects.get(i).getTitle()+"\n");
 			}
 			return sb.toString();
 		}else{
-			return "Failed\n";
+			return "FAILED\n";
 		}
 	}
 

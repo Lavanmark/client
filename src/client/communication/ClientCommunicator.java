@@ -17,12 +17,15 @@ public class ClientCommunicator {
 	private static int SERVER_PORT;
 	private static String URL_PREFIX;
 	private static final String HTTP_POST = "POST";
-	
+	private static final String HTTP_GET = "GET";
 	
 	private XStream xmlStream;
 	
+	
+	
+	
 	/**
-	 * Initializes the xml stream
+	 * Base constructor
 	 */
 	public ClientCommunicator(){
 		xmlStream = new XStream(new DomDriver());
@@ -31,7 +34,11 @@ public class ClientCommunicator {
 		URL_PREFIX = "http://" + SERVER_HOST + ":" + SERVER_PORT;
 	}
 	
-	
+	/**
+	 * 
+	 * @param host
+	 * @param port
+	 */
 	public ClientCommunicator(String host, String port){
 		xmlStream = new XStream(new DomDriver());
 		SERVER_HOST = host;
@@ -106,8 +113,29 @@ public class ClientCommunicator {
 	 * @return Download file result object
 	 * @throws ClientException
 	 */
-	public DownloadFileResult downloadFile(DownloadFileParams params) throws ClientException{
-		return (DownloadFileResult)doPost("/DownloadFile",params);
+	public void downloadFile(String url) throws ClientException{
+		//TODO this wont work 
+		doDownloadFile(url);
+	}
+	
+	private Byte[] doDownloadFile(String urlPath) throws ClientException{
+		try {
+			URL url = new URL(URL_PREFIX + urlPath);
+			HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+			connection.setRequestMethod(HTTP_GET);
+			connection.connect();
+			if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+				//Object result = xmlStream.fromXML(connection.getInputStream());
+				//TODO make this thing get file bytes and return them.
+			}
+			else {
+				throw new ClientException(String.format("doGet failed: %s (http code %d)", urlPath, connection.getResponseCode()));
+			}
+		}
+		catch (IOException e) {
+			throw new ClientException(String.format("doGet failed: %s", e.getMessage()), e);
+		}
+		return null;
 	}
 	
 	/**
@@ -116,7 +144,7 @@ public class ClientCommunicator {
 	 * @param postData
 	 * @throws ClientException
 	 */
-	private Object doPost(String urlPath, Object postData) throws ClientException {
+	private Object doPost(String urlPath, Object postData) throws ClientException{
 		try {
 			URL url = new URL(URL_PREFIX + urlPath);
 			HttpURLConnection connection = (HttpURLConnection)url.openConnection();
@@ -136,4 +164,11 @@ public class ClientCommunicator {
 		}
 	}
 	
+	/**
+	 * Returns url prefix of current server
+	 * @return
+	 */
+	public String getURLPrefix(){
+		return ClientCommunicator.URL_PREFIX;
+	}
 }

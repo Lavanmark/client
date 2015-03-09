@@ -14,7 +14,24 @@ public class GetBatchParams {
 		this.password = null;
 		this.projectID = -1;
 	}
-
+	
+	public GetBatchParams(String username, String password, int projectKey){
+		this.username = username;
+		this.password = password;
+		this.projectID = projectKey;
+	}
+	
+	
+	
+	
+	/*
+	 * 
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 * 
+	 */
+	
 	public String getUsername() {
 		return username;
 	}

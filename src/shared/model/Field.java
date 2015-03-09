@@ -42,9 +42,17 @@ public class Field {
 	 * 
 	 * @param id
 	 */
-	public Field(int id){
-		this.id = id;
-		this.projectKey = -1;
+	public Field(int key, String whatfor){
+		if(whatfor.equals("id")){
+			this.id = key;
+			this.projectKey = -1;
+		}else if(whatfor.equals("project")){
+			this.id = -1;
+			this.projectKey = key;
+		}else{
+			this.id = -1;
+			this.projectKey = -1;
+		}
 		this.recordOrder = -1;
 		this.title = null;
 		this.helpHtml = null;
@@ -70,6 +78,26 @@ public class Field {
 		this.title = title;
 		this.helpHtml = htmlHelp;
 		this.knownData = knownData;
+		this.xCoord = xCoord;
+		this.width = width;
+	}
+	
+	/**
+	 * 
+	 * @param projectKey
+	 * @param recordOrder
+	 * @param title
+	 * @param htmlHelp
+	 * @param xCoord
+	 * @param width
+	 */
+	public Field(int projectKey, int recordOrder, String title, String htmlHelp, int xCoord, int width){
+		this.id = -1;
+		this.projectKey = projectKey;
+		this.recordOrder = recordOrder;
+		this.title = title;
+		this.helpHtml = htmlHelp;
+		this.knownData = null;
 		this.xCoord = xCoord;
 		this.width = width;
 	}
@@ -255,5 +283,32 @@ public class Field {
 		if (xCoord != other.xCoord)
 			return false;
 		return true;
+	}
+
+	public String toString(String URLPrefix) {
+		//to string for download batch
+		if(this.knownData == null)
+			return id + "\n"
+					+ recordOrder + "\n"
+					+ title + "\n"
+					+ URLPrefix + "/" + helpHtml + "\n"
+					+ xCoord + "\n"
+					+ width + "\n";
+		else
+			return id + "\n"
+					+ recordOrder + "\n"
+					+ title + "\n"
+					+ URLPrefix + "/" + helpHtml + "\n"
+					+ xCoord + "\n"
+					+ width + "\n"
+					+ URLPrefix + "/" + knownData + "\n";
+	}
+
+	@Override
+	public String toString() {
+		//to string for get fields
+		return projectKey + "\n"
+				+ id + "\n"
+				+ title + "\n";
 	}
 }

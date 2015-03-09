@@ -14,7 +14,7 @@ create table user
 	lastName text not null,
 	email text unique not null,
 	recordsIndexed integer,
-	currentBatch text
+	currentBatch integer
 );
 
 --top of chain 

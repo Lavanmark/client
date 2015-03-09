@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
 import java.util.ArrayList;
 
 import org.junit.After;
@@ -17,15 +18,12 @@ public class BatchDAOTests {
 	private Database db;
 	private BatchDAO batd;
 	
+	
+	
+	
 	@Before
 	public void setup() {
 		db = new Database();
-		try {
-			Database.initialize();
-		} catch (DatabaseException e) {
-			e.printStackTrace();
-			return;
-		}
 		batd = db.getBatchDAO();
 	}
 	
@@ -107,19 +105,19 @@ public class BatchDAOTests {
 			Batch test2 = new Batch(2, "difffile", 2);
 			Batch test3 = new Batch(3, "thisisit", 1);
 			
-			ArrayList<Batch> testUsrs = new ArrayList<Batch>();
-			testUsrs.add(test1);
-			testUsrs.add(test2);
-			testUsrs.add(test3);
+			List<Batch> testBchs = new ArrayList<Batch>();
+			testBchs.add(test1);
+			testBchs.add(test2);
+			testBchs.add(test3);
 			
 			batd.add(test1);
 			batd.add(test2);
 			batd.add(test3);
 			
-			ArrayList<Batch> comp = new ArrayList<Batch>();
-			comp = (ArrayList<Batch>) batd.getAll();
+			List<Batch> comp = null;
+			comp = (List<Batch>) batd.getAll();
 			
-			assertEquals(comp,testUsrs);
+			assertEquals(comp,testBchs);
 			
 		}catch(DatabaseException e){
 			assertFalse(true);
@@ -136,19 +134,19 @@ public class BatchDAOTests {
 			Batch test2 = new Batch(1, "difffile", 2);
 			Batch test3 = new Batch(3, "thisisit", 1);
 			
-			ArrayList<Batch> testUsrs = new ArrayList<Batch>();
-			testUsrs.add(test1);
-			testUsrs.add(test2);
+			List<Batch> testBchs = new ArrayList<Batch>();
+			testBchs.add(test1);
+			testBchs.add(test2);
 			
 			batd.add(test1);
 			batd.add(test2);
 			batd.add(test3);
 			
 			Batch basedOnMe = new Batch(1,"project");
-			ArrayList<Batch> comp = new ArrayList<Batch>();
-			comp = (ArrayList<Batch>) batd.getProjectsBatch(basedOnMe);
+			List<Batch> comp = null;
+			comp = batd.getProjectsBatch(basedOnMe);
 			
-			assertEquals(comp,testUsrs);
+			assertEquals(comp,testBchs);
 			
 		}catch(DatabaseException e){
 			assertFalse(true);

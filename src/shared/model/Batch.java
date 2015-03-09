@@ -84,6 +84,7 @@ public class Batch {
 	 * 
 	 * 
 	 */
+	
 	public String getImgFile(){
 		return imgFile;
 	}
@@ -159,6 +160,13 @@ public class Batch {
 		if (status != other.status)
 			return false;
 		return true;
+	}
+
+	public String toString(String URLPrefix) {
+		
+		return this.id + "\n"
+				+ this.projectKey + "\n"
+				+ URLPrefix + "/" + this.imgFile + "\n";
 	}
 	
 }

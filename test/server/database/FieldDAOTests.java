@@ -3,6 +3,7 @@ package server.database;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
+import java.util.List;
 import java.util.ArrayList;
 
 import org.junit.After;
@@ -23,14 +24,7 @@ public class FieldDAOTests {
 	@Before
 	public void setup() {
 		db = new Database();
-		try {
-			Database.initialize();
-		} catch (DatabaseException e) {
-			e.printStackTrace();
-			return;
-		}
 		fldd = db.getFieldDAO();
-		
 	}
 	
 	@After
@@ -83,7 +77,7 @@ public class FieldDAOTests {
 			Field test2 = new Field(2, 5,"lastname","nothing","location", 10, 6);
 			Field test3 = new Field(3, 4,"country","something","or something", 300, 23);
 			
-			ArrayList<Field> testUsrs = new ArrayList<Field>();
+			List<Field> testUsrs = new ArrayList<Field>();
 			testUsrs.add(test1);
 			testUsrs.add(test2);
 			testUsrs.add(test3);
@@ -92,10 +86,39 @@ public class FieldDAOTests {
 			fldd.add(test2);
 			fldd.add(test3);
 			
-			ArrayList<Field> comp = new ArrayList<Field>();
-			comp = (ArrayList<Field>) fldd.getAll();
+			List<Field> comp = null;
+			comp = (List<Field>) fldd.getAll();
 			
 			assertEquals(comp,testUsrs);
+			
+		}catch(DatabaseException e){
+			assertFalse(true);
+		}finally{
+			db.endTransaction(false);
+		}
+	}
+	
+	@Test
+	public void getProjectsFieldsTest(){
+		try{
+			db.startTransaction();
+			Field test1 = new Field(1,1,"First name", "fields/help/help.html", 97, 20);
+			Field test2 = new Field(1,2,"Last name", "fields/help/help.html", 97, 20);
+			Field test3 = new Field(2,3,"hometown", "fields/help/help.html", 97, 20);
+			
+			List<Field> testFlds = new ArrayList<Field>();
+			testFlds.add(test1);
+			testFlds.add(test2);
+			
+			fldd.add(test1);
+			fldd.add(test2);
+			fldd.add(test3);
+			
+			Field basedOnMe = new Field(1,"project");
+			List<Field> comp = null;
+			comp = fldd.getProjectsFields(basedOnMe);
+			
+			assertEquals(comp,testFlds);
 			
 		}catch(DatabaseException e){
 			assertFalse(true);

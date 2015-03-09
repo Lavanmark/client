@@ -7,6 +7,9 @@ public class GetSampleImageParams {
 	private String password;
 	private int projectID;
 	
+	
+	
+	
 	/**
 	 * Initializes variables
 	 */
@@ -28,6 +31,14 @@ public class GetSampleImageParams {
 		this.projectID = projectKey;
 	}
 
+	/*
+	 * 
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 * 
+	 */
+	
 	public String getUsername() {
 		return username;
 	}

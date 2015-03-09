@@ -177,4 +177,53 @@ public class FieldDAO {
 		
 		return result;
 	}
+	/**
+	 * 
+	 * @param field
+	 * @return
+	 * @throws DatabaseException
+	 */
+	public List<Field> getProjectsFields(Field field)throws DatabaseException{
+		logger.entering("server.database.Field", "getField");
+		
+		List<Field> result = null;
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		try{
+			String query = "select id, projectKey, recordOrder, title, xCoord, width, helpHtml, knownData"
+					+ " from field"
+					+ " where projectKey = ?";
+			stmt = db.getConnection().prepareStatement(query);
+			
+			stmt.setInt(1, field.getProjectKey());
+			
+			rs = stmt.executeQuery();
+			result = new ArrayList<Field>();
+			while(rs.next()){
+				int id = rs.getInt(1);
+				int projectKey = rs.getInt(2);
+				int recordOrder = rs.getInt(3);
+				String title = rs.getString(4);
+				int xCoord = rs.getInt(5);
+				int width = rs.getInt(6);
+				String helpHtml = rs.getString(7);
+				String knownData = rs.getString(8);
+				
+				result.add(new Field(id, projectKey, recordOrder, title, helpHtml, knownData, xCoord, width));
+			}
+		}catch(SQLException e){
+			DatabaseException serverEx = new DatabaseException(e.getMessage(), e);
+			
+			logger.throwing("server.database.Field", "getField", serverEx);
+			
+			throw serverEx;
+		}finally{
+			Database.safeClose(rs);
+			Database.safeClose(stmt);
+		}
+		
+		logger.exiting("server.database.Field", "getField");
+		
+		return result;
+	}
 }

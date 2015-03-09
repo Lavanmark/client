@@ -9,6 +9,9 @@ public class Project {
 	private int recordHeight;
 	private String title;
 	
+	
+	
+	
 	/**
 	 * Base constructor
 	 */
@@ -24,12 +27,12 @@ public class Project {
 	 * 
 	 * @param title
 	 */
-	public Project(String title){
-		this.key = -1;
+	public Project(int key){
+		this.key = key;
 		this.recordsPerImage = -1;
 		this.firstYCoord = -1;
 		this.recordHeight = -1;
-		this.title = title;
+		this.title = null;
 	}
 	
 	/**
@@ -160,6 +163,13 @@ public class Project {
 		} else if (!title.equals(other.title))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return firstYCoord + "\n"
+				+ recordHeight + "\n"
+				+ recordsPerImage + "\n";
 	}
 	
 }

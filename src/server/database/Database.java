@@ -31,6 +31,8 @@ public class Database {
 	private FieldDAO fieldDAO;
 	
 	
+	
+	
 	/**
 	 * Creates instances of all DAO classes
 	 */
@@ -47,7 +49,7 @@ public class Database {
 	 * Initialize the database
 	 * @throws DatabaseException
 	 */
-	public static void initialize() throws DatabaseException{
+	public static void Initialize() throws DatabaseException{
 		try {
 			final String driver = "org.sqlite.JDBC";
 			Class.forName(driver);
@@ -101,7 +103,7 @@ public class Database {
 	
 	//Used by create database
 	private void createTables() throws SQLException{
-		String createUser = "create table user(id integer not null primary key autoincrement,username text unique not null,password text not null,firstName text not null,lastName text not null,email text unique not null,recordsIndexed integer,currentBatch text);";
+		String createUser = "create table user(id integer not null primary key autoincrement,username text unique not null,password text not null,firstName text not null,lastName text not null,email text unique not null,recordsIndexed integer,currentBatch integer);";
 		String createProject = "create table project(key integer not null primary key autoincrement,title text unique not null,recordsPerImage integer,firstYCoord integer,recordHeight integer);";
 		String createField = "create table field(id integer not null primary key autoincrement,projectKey integer not null,recordOrder integer not null,title text not null,xCoord integer not null,width integer not null,helpHtml text not null,knownData text);";
 		String createBatch = "create table batch(id integer not null primary key autoincrement,projectKey integer not null,file text unique not null,status integer not null);";
@@ -163,7 +165,9 @@ public class Database {
 	
 	/*
 	 * 
+	 * 
 	 * Static functions that safely close respective objects.
+	 * 
 	 * 
 	 */
 	
@@ -208,6 +212,8 @@ public class Database {
 			}
 		}
 	}
+	
+	
 	
 	
 	/*

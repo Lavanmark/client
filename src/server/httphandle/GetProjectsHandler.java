@@ -24,19 +24,23 @@ public class GetProjectsHandler implements HttpHandler {
 	
 	private XStream xmlStream = new XStream(new DomDriver());
 	
+	
+	
+	
 	/**
 	 * Handle HttpExchange from client
 	 */
 	@Override
 	public void handle(HttpExchange httpexchange) throws IOException {
 		logger.info("entering get projects handler");
+		
 		ValidateUserParams params = (ValidateUserParams)xmlStream.fromXML(httpexchange.getRequestBody());
 		User resultUser = null;
 		List<Project> resultList = null;
 		try {
-			resultUser = ServerFacade.validateUser(new User(params.getUsername(), params.getPassword()));
+			resultUser = ServerFacade.ValidateUser(new User(params.getUsername(), params.getPassword()));
 			if(resultUser != null)
-				resultList = ServerFacade.getAllProjects();
+				resultList = ServerFacade.GetAllProjects();
 		}
 		catch (ServerException e) {
             logger.log(Level.SEVERE, e.getMessage(), e);
@@ -52,7 +56,7 @@ public class GetProjectsHandler implements HttpHandler {
 		httpexchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);
 		xmlStream.toXML(resultToSend, httpexchange.getResponseBody());
 		httpexchange.getResponseBody().close();
+		
 		logger.info("exiting get projects handler");
 	}
-
 }

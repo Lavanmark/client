@@ -21,7 +21,7 @@ public class ServerUnitTests {
 		Server.main(args);
 		Database db = new Database();
 		try{
-			Database.initialize();
+			Database.Initialize();
 			db.startTransaction();
 			db.createDatabase();
 			db.endTransaction(true);
@@ -54,7 +54,6 @@ public class ServerUnitTests {
 		org.junit.runner.JUnitCore.main(testClasses);
 		Database db = new Database();
 		try{
-			Database.initialize();
 			db.startTransaction();
 			db.createDatabase();
 			db.endTransaction(true);

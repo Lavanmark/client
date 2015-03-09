@@ -24,14 +24,14 @@ public class Server {
 	
 	static {
 		try {
-			initLog();
+			InitLog();
 		}
 		catch (IOException e) {
 			System.out.println("Could not initialize log: " + e.getMessage());
 		}
 	}
 	
-	private static void initLog() throws IOException {
+	private static void InitLog() throws IOException {
 		
 		Level logLevel = Level.FINE;
 		
@@ -52,6 +52,9 @@ public class Server {
 
 	
 	private HttpServer server;
+	
+	
+	
 	
 	private Server() {
 		return;
@@ -86,11 +89,16 @@ public class Server {
 		server.createContext("/SubmitBatch", this.submitBatchHandler);
 		server.createContext("/GetFields", this.getFieldsHandler);
 		server.createContext("/Search", this.searchHandler);
-		server.createContext("/DownloadFile", this.downloadFileHandler);
+		server.createContext("/", this.downloadFileHandler);
+		
 		
 		logger.info("Starting HTTP Server");
 
 		server.start();
+		
+		logger.info("Server Hosted at: " + server.getAddress().getHostName());
+		logger.info("Server Running on Port: " + SERVER_PORT_NUMBER);
+
 	}
 
 	private HttpHandler validateUserHandler = new ValidateUserHandler();

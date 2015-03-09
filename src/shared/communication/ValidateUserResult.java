@@ -7,6 +7,9 @@ public class ValidateUserResult {
 	private boolean valid;
 	private User usr;
 	
+	
+	
+	
 	/**
 	 * Defaults user to null
 	 * @param valid
@@ -25,6 +28,16 @@ public class ValidateUserResult {
 		this.usr = usr;
 	}
 	
+	
+	
+	
+	/*
+	 * 
+	 * 
+	 * GETTERS AND SETTERS
+	 * 
+	 * 
+	 */
 	
 	public boolean isValid() {
 		return valid;
@@ -53,9 +66,9 @@ public class ValidateUserResult {
 	@Override
 	public String toString() {
 		if(valid)
-			return "True\n" + usr.getFirstName() + "\n" + usr.getLastName() + "\n" + usr.getRecordsIndexed() + "\n";
+			return "TRUE\n" + usr.getFirstName() + "\n" + usr.getLastName() + "\n" + usr.getRecordsIndexed() + "\n";
 		else
-			return "False\n";
+			return "FALSE\n";
 	}
 	@Override
 	public int hashCode() {

@@ -136,10 +136,10 @@ public class ProjectDAO {
 		try{
 			String query = "select key, title, recordsPerImage, firstYCoord, recordHeight"
 					+ " from project"
-					+ " where title = ?";
+					+ " where key = ?";
 			stmt = db.getConnection().prepareStatement(query);
 			
-			stmt.setString(1, project.getTitle());
+			stmt.setInt(1, project.getKey());
 			
 			rs = stmt.executeQuery();
 			while(rs.next()){

@@ -151,4 +151,9 @@ public class Record {
 		
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return data;
+	}
 }
