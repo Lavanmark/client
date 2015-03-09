@@ -127,11 +127,9 @@ public class SearchTuple{
 		return true;
 	}
 
-
-	@Override
-	public String toString() {
+	public String toString(String URLPrefix) {
 		return this.batchID + "\n"
-				+ this.imgURL + "\n"
+				+ URLPrefix + this.imgURL + "\n"
 				+ this.recordNum + "\n"
 				+ this.fieldID + "\n";
 	}

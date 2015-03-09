@@ -254,7 +254,7 @@ public class Controller implements IController {
 			SearchResult result = cc.search(params);
 			if(result != null){
 				if(result.isSuccessful())
-					getView().setResponse(result.toString());
+					getView().setResponse(result.toString(cc.getURLPrefix()));
 				else
 					getView().setResponse("FAILED\n");
 			}else

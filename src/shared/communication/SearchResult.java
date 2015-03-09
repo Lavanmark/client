@@ -94,15 +94,14 @@ public class SearchResult {
 		return true;
 	}
 	
-	@Override
-	public String toString(){
+	public String toString(String URLPrefix){
 		if(successful){
 			if(searchTuples.size() < 1){
 				return "FAILED\n";
 			}
 			StringBuilder sb = new StringBuilder();
 			for(SearchTuple st : searchTuples){
-				sb.append(st.toString());
+				sb.append(st.toString(URLPrefix));
 			}
 			return sb.toString();
 		}else
