@@ -17,6 +17,7 @@ public class Record {
 	 */
 	public Record(){
 		this.recordNum = -1;
+		this.rowNum = -1;
 		this.projectKey = -1;
 		this.imageKey = -1;
 		this.fieldID = -1;

@@ -1,14 +1,38 @@
-Mar 09, 2015 2:45:55 PM server.Server run
+Mar 10, 2015 12:36:32 AM server.Server run
 INFO: Initializing Model
-Mar 09, 2015 2:45:55 PM server.Server run
+Mar 10, 2015 12:36:32 AM server.Server run
 INFO: Initializing HTTP Server
-Mar 09, 2015 2:45:55 PM server.Server run
+Mar 10, 2015 12:36:32 AM server.Server run
 INFO: Starting HTTP Server
-Mar 09, 2015 2:45:55 PM server.Server run
+Mar 10, 2015 12:36:32 AM server.Server run
 INFO: Server Hosted at: 0:0:0:0:0:0:0:0
-Mar 09, 2015 2:45:55 PM server.Server run
+Mar 10, 2015 12:36:32 AM server.Server run
 INFO: Server Running on Port: 39640
-Mar 09, 2015 2:45:57 PM server.httphandle.SearchHandler handle
+Mar 10, 2015 12:36:36 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Mar 10, 2015 12:36:36 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Mar 10, 2015 12:36:57 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Mar 10, 2015 12:36:57 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Mar 10, 2015 12:39:27 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Mar 10, 2015 12:39:27 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Mar 10, 2015 12:39:43 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Mar 10, 2015 12:39:43 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Mar 10, 2015 12:39:58 AM server.httphandle.SearchHandler handle
 INFO: entering search handler
-Mar 09, 2015 2:45:57 PM server.httphandle.SearchHandler handle
+Mar 10, 2015 12:39:58 AM server.httphandle.SearchHandler handle
 INFO: exiting search handler
+Mar 10, 2015 12:40:07 AM server.httphandle.SearchHandler handle
+INFO: entering search handler
+Mar 10, 2015 12:40:07 AM server.httphandle.SearchHandler handle
+INFO: exiting search handler
+Mar 10, 2015 12:42:37 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Mar 10, 2015 12:42:37 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
