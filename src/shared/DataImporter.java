@@ -197,8 +197,8 @@ public class DataImporter {
 			String imgURL = fileElem.getTextContent();
 			
 			batches.add(new Batch(projectKey, imgURL, 0));
-			db.getBatchDAO().add(batches.get(i));
-			buildRecords(projectKey, batches.get(i).getId(), batchElem.getElementsByTagName("record"));
+			int id = db.getBatchDAO().add(batches.get(i));
+			buildRecords(projectKey, id, batchElem.getElementsByTagName("record"));
 		}
 	}
 	

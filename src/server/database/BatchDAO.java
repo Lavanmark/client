@@ -30,6 +30,7 @@ public class BatchDAO {
 	public BatchDAO(Database db){
 		this.db = db;
 	}
+	
 	/**
 	 * Gets a list of all the batches in Database
 	 * 
@@ -76,7 +77,7 @@ public class BatchDAO {
 	 * @param batch
 	 * @throws DatabaseException
 	 */
-	public void add(Batch batch) throws DatabaseException{
+	public int add(Batch batch) throws DatabaseException{
 		logger.entering("server.database.Batch", "add");
 		
 		PreparedStatement stmt = null;
@@ -95,6 +96,7 @@ public class BatchDAO {
 				keyRS.next();
 				int id = keyRS.getInt(1);
 				batch.setId(id);
+				return id;
 			}else{
 				
 				DatabaseException serverEx = new DatabaseException("Could not insert batch");
@@ -114,9 +116,6 @@ public class BatchDAO {
 			Database.safeClose(stmt);
 			Database.safeClose(keyRS);
 		}
-		
-		logger.exiting("server.database.Batch", "add");
-		
 	}
 
 	/**
