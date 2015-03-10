@@ -247,7 +247,7 @@ public class DataImporter {
 		if(recordList != null){
 			List<Record> records = new ArrayList<Record>();
 			List<Field> fields = db.getFieldDAO().getProjectsFields(new Field(projectKey, "project"));
-			for (int i = 0; i < recordList.getLength(); ++i) {
+			for (int i = 0; i < recordList.getLength(); i++) {
 				
 				Element recordElem = (Element)recordList.item(i);
 				
@@ -257,8 +257,9 @@ public class DataImporter {
 					Element valueElem = (Element)valueList.item(order-1);
 					
 					String data = valueElem.getTextContent();
-					records.add(new Record(i+1, projectKey, batchID, fields.get(f).getId(), data));
-					db.getRecordDAO().add(records.get(((i+1)*(f+1))-1));
+					Record addme = new Record(i+1, projectKey, batchID, fields.get(f).getId(), data);
+					records.add(addme);
+					db.getRecordDAO().add(addme);
 				}
 			}
 		}
