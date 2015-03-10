@@ -215,7 +215,7 @@ public class ServerFacade {
 		for(int i = 0; i < outter.length; i++){
 			String[] inner = outter[i].split(",");
 			for(int k = 0; k < inner.length; k++){
-				resultList.add(new Record(batch.getProjectKey(),batch.getId(),fields.get(k).getId(),inner[k]));
+				resultList.add(new Record(i+1,batch.getProjectKey(),batch.getId(),fields.get(k).getId(),inner[k]));
 			}
 		}
 		return resultList;
