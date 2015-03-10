@@ -129,7 +129,7 @@ public class SearchTuple{
 
 	public String toString(String URLPrefix) {
 		return this.batchID + "\n"
-				+ URLPrefix + "/" +this.imgURL + "\n"
+				+ URLPrefix + "/" + this.imgURL + "\n"
 				+ this.recordNum + "\n"
 				+ this.fieldID + "\n";
 	}

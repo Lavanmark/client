@@ -100,8 +100,8 @@ public class SearchResult {
 				return "FAILED\n";
 			}
 			StringBuilder sb = new StringBuilder();
-			for(SearchTuple st : searchTuples){
-				sb.append(st.toString(URLPrefix));
+			for(int i = 0; i < searchTuples.size(); i++){
+				sb.append(searchTuples.get(i).toString(URLPrefix));
 			}
 			return sb.toString();
 		}else

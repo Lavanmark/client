@@ -277,6 +277,8 @@ public class ServerFacade {
 				db.endTransaction(false);
 				return null;
 			}
+			System.out.println("fields " + fields.size());
+			System.out.println("wordlist " + wordList.size());
 			
 			//go through all fields
 			for(int f = 0; f < fields.size(); f++){
@@ -300,6 +302,7 @@ public class ServerFacade {
 				}
 			}
 			db.endTransaction(false);
+			System.out.println("ResultList size " + resultList.size());
 			return resultList;
 		}catch(DatabaseException e){
 			e.printStackTrace();

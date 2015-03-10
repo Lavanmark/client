@@ -150,6 +150,7 @@ public class Record {
 		int result = 1;
 		result = prime * result + ((data == null) ? 0 : data.hashCode());
 		result = prime * result + fieldID;
+		result = prime * result + rowNum;
 		result = prime * result + imageKey;
 		result = prime * result + projectKey;
 		result = prime * result + recordNum;
@@ -166,6 +167,8 @@ public class Record {
 			return false;
 		Record other = (Record) obj;
 		if (recordNum != other.recordNum)
+			return false;
+		if(rowNum != other.rowNum)
 			return false;
 		if (fieldID != other.fieldID)
 			return false;

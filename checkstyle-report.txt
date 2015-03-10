@@ -1,0 +1,73 @@
+Starting audit...
+/home/tyler/Desktop/CS240/RecordIndexer/src/client/communication/ClientCommunicator.java:132: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/client/communication/ClientCommunicator.java:160: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/Server.java:77: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/Database.java:17: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/Database.java:106: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/Database.java:107: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/Database.java:108: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/Database.java:109: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/Database.java:110: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/Database.java:137: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/FieldDAO.java:49: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/FieldDAO.java:63: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/FieldDAO.java:92: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/FieldDAO.java:145: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/FieldDAO.java:163: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/FieldDAO.java:193: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/FieldDAO.java:212: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/ProjectDAO.java:47: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/RecordDAO.java:47: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/UserDAO.java:47: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/UserDAO.java:61: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/UserDAO.java:91: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/UserDAO.java:142: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/database/UserDAO.java:187: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:107: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:115:29: Nested if-else depth is 3 (max allowed is 2).
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:127: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:132: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:163: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:183: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:211: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:212: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:218: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:265: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:290:25: Nested for depth is 2 (max allowed is 1).
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:292: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:295: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:313: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/facade/ServerFacade.java:318: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/DownloadBatchHandler.java:39: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/GetFieldsHandler.java:42: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/GetProjectsHandler.java:37: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/GetProjectsHandler.java:41: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/GetSampleImageHandler.java:35: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/GetSampleImageHandler.java:39: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/SearchHandler.java:41: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/SearchHandler.java:43: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/SubmitBatchHandler.java:39: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/SubmitBatchHandler.java:41: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/server/httphandle/ValidateUserHandler.java:35: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/DataImporter.java:70:4: Got an exception - expecting EOF, found 'db'
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/communication/GetBatchResult.java:123:5: Cyclomatic Complexity is 16 (max allowed is 10).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/communication/GetBatchResult.java:123:5: NPath Complexity is 1,536 (max allowed is 200).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/communication/SearchTuple.java:107:5: NPath Complexity is 256 (max allowed is 200).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/communication/ValidateUserResult.java:69: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Batch.java:142:5: NPath Complexity is 256 (max allowed is 200).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Field.java:74: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Field.java:94: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Field.java:115: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Field.java:137: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Field.java:251:5: Cyclomatic Complexity is 18 (max allowed is 10).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Field.java:251:5: NPath Complexity is 16,384 (max allowed is 200).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Project.java:143:5: Cyclomatic Complexity is 11 (max allowed is 10).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Project.java:143:5: NPath Complexity is 512 (max allowed is 200).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Record.java:68: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Record.java:159:5: Cyclomatic Complexity is 11 (max allowed is 10).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/Record.java:159:5: NPath Complexity is 512 (max allowed is 200).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/User.java:59: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/User.java:81: Line is longer than 100 characters.
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/User.java:197:5: Cyclomatic Complexity is 22 (max allowed is 10).
+/home/tyler/Desktop/CS240/RecordIndexer/src/shared/model/User.java:197:5: NPath Complexity is 65,536 (max allowed is 200).
+Audit done.
