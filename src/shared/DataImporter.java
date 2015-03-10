@@ -79,10 +79,20 @@ public class DataImporter {
 		File copyTo = new File("./Data/Records");
 		if(copyFrom.isDirectory() && copyTo.isDirectory()){
 			try {
+				//delete any existing directories where we are moving files
+				File[] deleteOld = copyTo.listFiles();
+				for(int i = 0; i < deleteOld.length; i++){
+					if(deleteOld[i].isDirectory())
+						FileUtils.deleteDirectory(deleteOld[i]);
+					else if(deleteOld[i].isFile())
+						FileUtils.forceDelete(deleteOld[i]);
+				}
+				
+				//copy directory information over to new place
 				File[] copyFromFiles = copyFrom.listFiles();
 				for(int i = 0; i < copyFromFiles.length; i++){
 					if(copyFromFiles[i].isDirectory())
-						FileUtils.copyDirectory(copyFromFiles[i], copyTo);
+						FileUtils.copyDirectoryToDirectory(copyFromFiles[i], copyTo);
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
