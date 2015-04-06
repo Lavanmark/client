@@ -133,4 +133,11 @@ public class SearchTuple{
 				+ this.recordNum + "\n"
 				+ this.fieldID + "\n";
 	}
+	@Override
+	public String toString(){
+		
+		String[] spliturl = imgURL.split("/");
+		
+		return spliturl[spliturl.length-1].split("\\.")[0];
+	}
 }

@@ -1,22 +1,632 @@
-Mar 10, 2015 11:39:46 AM server.Server run
+Apr 06, 2015 8:18:13 AM server.Server run
 INFO: Initializing Model
-Mar 10, 2015 11:39:46 AM server.Server run
+Apr 06, 2015 8:18:13 AM server.Server run
 INFO: Initializing HTTP Server
-Mar 10, 2015 11:39:46 AM server.Server run
+Apr 06, 2015 8:18:13 AM server.Server run
 INFO: Starting HTTP Server
-Mar 10, 2015 11:39:46 AM server.Server run
+Apr 06, 2015 8:18:13 AM server.Server run
 INFO: Server Hosted at: 0:0:0:0:0:0:0:0
-Mar 10, 2015 11:39:46 AM server.Server run
+Apr 06, 2015 8:18:13 AM server.Server run
 INFO: Server Running on Port: 39640
-Mar 10, 2015 11:40:50 AM server.httphandle.SearchHandler handle
-INFO: entering search handler
-Mar 10, 2015 11:40:50 AM server.httphandle.SearchHandler handle
-INFO: exiting search handler
-Mar 10, 2015 11:43:15 AM server.httphandle.SearchHandler handle
-INFO: entering search handler
-Mar 10, 2015 11:43:15 AM server.httphandle.SearchHandler handle
-INFO: exiting search handler
-Mar 10, 2015 11:43:25 AM server.httphandle.SearchHandler handle
-INFO: entering search handler
-Mar 10, 2015 11:43:25 AM server.httphandle.SearchHandler handle
-INFO: exiting search handler
+Apr 06, 2015 8:18:17 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Apr 06, 2015 8:18:17 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Apr 06, 2015 8:18:18 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Apr 06, 2015 8:18:18 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Apr 06, 2015 8:18:19 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:18:19 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 8:18:20 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:20 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image0.png
+Apr 06, 2015 8:18:20 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:28 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:28 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 8:18:28 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:29 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:29 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:18:29 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:30 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:30 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 8:18:30 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:31 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:31 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/age.html
+Apr 06, 2015 8:18:31 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:31 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:31 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/age.html
+Apr 06, 2015 8:18:31 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:40 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:40 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 8:18:40 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:43 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:43 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:18:43 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:44 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:44 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 8:18:44 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:48 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:48 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:18:48 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:49 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:49 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 8:18:49 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:49 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:49 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/age.html
+Apr 06, 2015 8:18:49 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:50 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:50 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 8:18:50 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:51 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:51 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:18:51 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:51 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:51 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/age.html
+Apr 06, 2015 8:18:51 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:52 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:52 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:18:52 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:52 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:52 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:18:52 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:53 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:53 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 8:18:53 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:53 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:53 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 8:18:53 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:54 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:54 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:18:54 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:54 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:54 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 8:18:54 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:18:55 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:18:55 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:18:55 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:20:04 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:20:04 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 8:20:04 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:20:05 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:20:05 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:20:05 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:20:06 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Apr 06, 2015 8:20:06 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Apr 06, 2015 8:20:07 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:20:07 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 8:29:41 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:29:41 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 8:29:59 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:29:59 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 8:30:10 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Apr 06, 2015 8:30:10 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Apr 06, 2015 8:30:11 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Apr 06, 2015 8:30:11 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Apr 06, 2015 8:30:12 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:30:12 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 8:30:13 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:13 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image1.png
+Apr 06, 2015 8:30:13 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:26 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:26 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:30:26 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:27 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:27 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 8:30:27 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:28 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:28 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 8:30:28 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:28 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:28 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/age.html
+Apr 06, 2015 8:30:28 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:29 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:29 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:30:29 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:30 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:30 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 8:30:30 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:41 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:41 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 8:30:41 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:42 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:42 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 8:30:42 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:43 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:30:43 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/age.html
+Apr 06, 2015 8:30:43 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:30:49 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Apr 06, 2015 8:30:49 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Apr 06, 2015 8:30:50 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:30:50 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 8:32:16 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:32:16 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 8:32:19 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Apr 06, 2015 8:32:19 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Apr 06, 2015 8:32:21 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Apr 06, 2015 8:32:21 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Apr 06, 2015 8:32:22 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:32:22 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 8:32:23 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 8:32:23 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image2.png
+Apr 06, 2015 8:32:23 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 8:32:27 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Apr 06, 2015 8:32:27 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Apr 06, 2015 8:32:28 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 8:32:28 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:35:26 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:35:26 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:35:35 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Apr 06, 2015 11:35:35 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Apr 06, 2015 11:35:38 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Apr 06, 2015 11:35:38 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Apr 06, 2015 11:35:39 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:35:39 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:35:40 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:35:40 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image3.png
+Apr 06, 2015 11:35:40 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:35:44 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:35:44 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:35:44 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:35:47 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:35:47 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:35:47 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:35:48 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:35:48 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:35:48 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:35:49 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:35:49 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:35:49 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:35:52 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:35:52 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:35:52 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:35:58 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Apr 06, 2015 11:35:58 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Apr 06, 2015 11:35:59 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:35:59 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:36:13 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Apr 06, 2015 11:36:13 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Apr 06, 2015 11:36:15 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Apr 06, 2015 11:36:15 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Apr 06, 2015 11:36:16 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:36:16 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:36:17 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:36:17 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image4.png
+Apr 06, 2015 11:36:17 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:36:27 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:36:27 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:36:27 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:36:29 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:36:29 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:36:29 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:36:50 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Apr 06, 2015 11:36:50 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Apr 06, 2015 11:36:52 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:36:52 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:37:33 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:37:33 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:37:43 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Apr 06, 2015 11:37:43 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Apr 06, 2015 11:37:46 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Apr 06, 2015 11:37:46 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Apr 06, 2015 11:37:47 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:37:47 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:37:48 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:37:48 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image5.png
+Apr 06, 2015 11:37:48 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:37:53 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:37:53 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:37:53 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:38:01 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Apr 06, 2015 11:38:02 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Apr 06, 2015 11:38:03 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:38:03 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:38:08 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Apr 06, 2015 11:38:08 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Apr 06, 2015 11:38:10 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Apr 06, 2015 11:38:11 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Apr 06, 2015 11:38:12 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:38:12 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:38:13 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:38:13 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image6.png
+Apr 06, 2015 11:38:13 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:38:30 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Apr 06, 2015 11:38:30 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Apr 06, 2015 11:38:31 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:38:31 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:40:10 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:40:10 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:40:21 AM server.httphandle.GetProjectsHandler handle
+INFO: entering get projects handler
+Apr 06, 2015 11:40:21 AM server.httphandle.GetProjectsHandler handle
+INFO: exiting get projects handler
+Apr 06, 2015 11:40:24 AM server.httphandle.DownloadBatchHandler handle
+INFO: entering download batch handler
+Apr 06, 2015 11:40:24 AM server.httphandle.DownloadBatchHandler handle
+INFO: exiting download batch handler
+Apr 06, 2015 11:40:25 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:40:25 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:40:26 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:40:26 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image7.png
+Apr 06, 2015 11:40:26 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:40:29 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:40:29 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:40:29 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:40:31 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:40:31 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:40:31 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:45:05 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:45:05 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:45:07 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:45:07 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image7.png
+Apr 06, 2015 11:45:07 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:45:22 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:45:22 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:45:22 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:45:23 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:45:23 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:45:23 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:45:25 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:45:25 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:45:25 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:45:28 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:45:28 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:45:28 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:45:39 AM server.httphandle.SubmitBatchHandler handle
+INFO: entering submit batch handler
+Apr 06, 2015 11:45:40 AM server.httphandle.SubmitBatchHandler handle
+INFO: exiting submit batch handler
+Apr 06, 2015 11:45:41 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:45:41 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:47:42 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:47:42 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:47:43 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:47:43 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image7.png
+Apr 06, 2015 11:47:43 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:47:53 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:47:53 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 11:47:53 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:47:55 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:47:55 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:47:55 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:47:58 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:47:58 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:47:58 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:48:10 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:48:10 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:48:10 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:48:12 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:48:12 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:48:12 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:48:13 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:48:13 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:48:13 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:48:14 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:48:14 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 11:48:14 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:48:15 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:48:15 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/age.html
+Apr 06, 2015 11:48:15 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:51:55 AM server.httphandle.ValidateUserHandler handle
+INFO: entering validate user handler
+Apr 06, 2015 11:51:55 AM server.httphandle.ValidateUserHandler handle
+INFO: exiting validate user handler
+Apr 06, 2015 11:51:56 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:51:56 AM server.httphandle.DownloadFileHandler handle
+INFO: /images/1890_image7.png
+Apr 06, 2015 11:51:56 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:52:07 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:52:07 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:52:07 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:52:09 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:52:09 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/gender.html
+Apr 06, 2015 11:52:09 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:52:10 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:52:10 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:52:10 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:52:39 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:52:39 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/age.html
+Apr 06, 2015 11:52:39 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:52:47 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:52:47 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/first_name.html
+Apr 06, 2015 11:52:47 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK
+Apr 06, 2015 11:54:03 AM server.httphandle.DownloadFileHandler handle
+INFO: entering download file handler
+Apr 06, 2015 11:54:03 AM server.httphandle.DownloadFileHandler handle
+INFO: /fieldhelp/last_name.html
+Apr 06, 2015 11:54:03 AM server.httphandle.DownloadFileHandler handle
+INFO: exiting download file handler OK

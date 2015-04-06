@@ -245,7 +245,6 @@ public class DataImporter {
 	 */
 	private void buildRecords(int projectKey, int batchID, NodeList recordList) throws DatabaseException{
 		if(recordList != null){
-			List<Record> records = new ArrayList<Record>();
 			List<Field> fields = db.getFieldDAO().getProjectsFields(new Field(projectKey, "project"));
 			for (int i = 0; i < recordList.getLength(); i++) {
 				
@@ -258,7 +257,6 @@ public class DataImporter {
 					
 					String data = valueElem.getTextContent();
 					Record addme = new Record(i+1, projectKey, batchID, fields.get(f).getId(), data);
-					records.add(addme);
 					db.getRecordDAO().add(addme);
 				}
 			}

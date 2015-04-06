@@ -4,7 +4,6 @@ package client.communication;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import shared.communication.*;
 import client.ClientException;
 
@@ -17,7 +16,6 @@ public class ClientCommunicator {
 	private static int SERVER_PORT;
 	private static String URL_PREFIX;
 	private static final String HTTP_POST = "POST";
-	private static final String HTTP_GET = "GET";
 	
 	private XStream xmlStream;
 	
@@ -54,6 +52,7 @@ public class ClientCommunicator {
 	public ValidateUserResult validateUser(ValidateUserParams params) throws ClientException{
 		return (ValidateUserResult)doPost("/ValidateUser", params);
 	}
+	
 	/**
 	 * Gets all the projects in the database
 	 * @return Get all project result object
@@ -62,6 +61,7 @@ public class ClientCommunicator {
 	public GetAllProjectResult getAllProjects(ValidateUserParams params) throws ClientException{
 		return (GetAllProjectResult)doPost("/GetAllProjects", params);
 	}
+	
 	/**
 	 * Based on parameters it will get a sample image
 	 * @param params
@@ -71,6 +71,7 @@ public class ClientCommunicator {
 	public GetSampleImageResult getSampleImage(GetSampleImageParams params) throws ClientException{
 		return (GetSampleImageResult)doPost("/GetSampleImage", params);
 	}
+	
 	/**
 	 * Based on parameters it will download a batch
 	 * @param params
@@ -80,6 +81,7 @@ public class ClientCommunicator {
 	public GetBatchResult downloadBatch(GetBatchParams params) throws ClientException{
 		return (GetBatchResult)doPost("/DownloadBatch", params);
 	}
+	
 	/**
 	 * Based on parameters it will submit a batch to be updated to database
 	 * @param params
@@ -89,6 +91,7 @@ public class ClientCommunicator {
 	public AddBatchResult submitBatch(AddBatchParams params) throws ClientException{
 		return (AddBatchResult)doPost("/SubmitBatch",params);
 	}
+	
 	/**
 	 * Based on parameters it gets all the fields of a project
 	 * @param params
@@ -98,6 +101,7 @@ public class ClientCommunicator {
 	public GetFieldsResult getFields(GetFieldsParams params) throws ClientException{
 		return (GetFieldsResult)doPost("/GetFields",params);
 	}
+	
 	/**
 	 * Based on parameters it searches the database and return result
 	 * @param params
@@ -106,36 +110,6 @@ public class ClientCommunicator {
 	 */
 	public SearchResult search(SearchParams params) throws ClientException{
 		return (SearchResult)doPost("/Search",params);
-	}
-	/**
-	 * Based on parameters it downloads a file from server
-	 * @param params
-	 * @return Download file result object
-	 * @throws ClientException
-	 */
-	public void downloadFile(String url) throws ClientException{
-		//TODO this wont work 
-		doDownloadFile(url);
-	}
-	
-	private Byte[] doDownloadFile(String urlPath) throws ClientException{
-		try {
-			URL url = new URL(URL_PREFIX + urlPath);
-			HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-			connection.setRequestMethod(HTTP_GET);
-			connection.connect();
-			if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-				//Object result = xmlStream.fromXML(connection.getInputStream());
-				//TODO make this thing get file bytes and return them.
-			}
-			else {
-				throw new ClientException(String.format("doGet failed: %s (http code %d)", urlPath, connection.getResponseCode()));
-			}
-		}
-		catch (IOException e) {
-			throw new ClientException(String.format("doGet failed: %s", e.getMessage()), e);
-		}
-		return null;
 	}
 	
 	/**

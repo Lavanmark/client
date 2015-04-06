@@ -95,7 +95,7 @@ public class ServerFacade {
 	public static GetBatchResult DownloadBatch(User user, int projectKey) throws ServerException{
 		Database db = new Database();
 		
-		if(user.getCurrentBatch() == -1){
+		if(user.getCurrentBatch() < 1){
 			try{
 				db.startTransaction();
 				

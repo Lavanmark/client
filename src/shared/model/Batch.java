@@ -1,7 +1,11 @@
 package shared.model;
 
+import java.io.Serializable;
+
 //rename this class.
-public class Batch {
+public class Batch implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	private int id;
 	private int projectKey;

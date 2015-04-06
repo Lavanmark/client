@@ -1,5 +1,7 @@
 package shared.model;
 
+import java.io.Serializable;
+
 /**
  * 
  * @author Tyler Draughon
@@ -7,8 +9,9 @@ package shared.model;
  *
  */
 
-public class Field {
+public class Field implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	
 	private int id;
 	private int projectKey;
@@ -306,9 +309,11 @@ public class Field {
 
 	@Override
 	public String toString() {
+		return title;
 		//to string for get fields
-		return projectKey + "\n"
+		/*return projectKey + "\n"
 				+ id + "\n"
 				+ title + "\n";
+				*/
 	}
 }
